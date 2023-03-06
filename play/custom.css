@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* main */
+body{
+    background: url("../img/bgc.jpeg") no-repeat center center/cover;
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header */
+header{
+    display: flex;
+    /* justify-content: center; */
+}
+header h1{
+    margin: 0 auto;
+    font-size: 3rem;
+    font-family: 'comic sans ms';
+    color: rgb(212, 226, 174);
+    text-shadow: 0 0 0.5rem yellow;
+    letter-spacing: 0.1rem;
+}
+header div{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 2rem;
+    align-items: flex-end;
+}
+header div span{
+    font-family: 'Ubuntu';
+    font-weight: lighter;
+    color: white;
+    padding: 0.1rem;
+    font-size: 2rem; 
+    text-shadow: 0 0 0.5rem white;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+header div span:hover{
+    letter-spacing: 0.2rem;
+    /* background-color: rgb(65, 105, 225,0.01); */
+    filter: brightness(1.5);
+}
+/* board */
+#board{
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    width: 45rem;
+    height: 35rem;
+    background-color: rgb(11, 18, 11);
+    box-shadow: 0 0 1rem white;
+    margin-top: 2rem;
+}
+#board .tail{
+    transition: 0.02s;
+}
+/* snakePart and head */
+.snakePart{
+    /* width: 2rem;
+    height: 2rem; */
+    background-color: rgb(55, 239, 101);
+    box-shadow: 0 0 1rem rgb(163, 167, 157);
+
+    /* border-radius: 1rem 0.5rem 1rem 0.5rem; */
+}
+.head{
+    
+    box-shadow: 0 0 1rem rgb(91, 129, 34);
+    
+    background-color: rgb(0, 255, 76);
+}
+.tail{
+    box-shadow: 0 0 1rem rgb(23, 165, 71);
+    
+    background-color: green;
+    
+}
+/* food */
+.food{
+    width: 2rem;
+    height: 2rem;
+    background-color: orange;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem orange;
+}
+
+.msgbox{
+    width:19rem;
+    height: 10rem;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+
+    /* border: 0.1rem solid rgb(204, 167, 167); */
+    border-radius: 2rem;
+    background: snow;
+    box-shadow: 0 0 0.2rem rgb(170, 111, 66);
+    animation: zoomIn 1s ease forwards;
+   
+}
+@keyframes zoomIn {
+    0%{
+        scale: 0 0;
+    }
+    100%{
+        scale: 2 2;
+    }
+}
+@keyframes zoomOut {
+    0%{
+        scale: 2 2;
+    }
+    100%{
+        scale: 0 0;
+    }
+}
+/* msg */
+#msg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+}
+#msg p{
+    font-size: 1.3rem;
+    font-family: 'Ubuntu';
+    letter-spacing: 0.1rem;
+    cursor: default;
+}
+.line{
+    width: inherit;
+    display: flex;
+    justify-content: space-evenly;
+}
+.line button{
+    /* width: 3rem; */
+    height: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 1.5rem;
+    transition: 0.5s;
+    padding: 1%;
+}
+.line button:hover{
+    background-color: royalblue;
+    color:antiquewhite;
+}

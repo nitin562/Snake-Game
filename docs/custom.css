@@ -1,0 +1,175 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* background image */
+body{
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/bgMain.jpg") center center/100% 100%;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    /* transform: translateY(-10%); */
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    
+}
+.menu button{
+    margin: 1rem 0;
+    width: 25rem;
+    /* height: 5rem; */
+    background-color: rgb(0, 0, 0);
+    color: rgb(235, 231, 231);
+    font-size:3rem;
+    font-family: 'Ubuntu';
+    text-shadow: 0 0 1rem greenyellow;
+    border-radius: 2rem;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+}
+.menu button:hover{
+    scale: 1.5;
+    
+}
+.msgbox{
+    background-color: rgb(239, 233, 233);
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 28rem;
+    height: 23rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem black;
+    animation: zoomin 0.5s ease forwards;
+}
+@keyframes zoomin {
+    0%{
+        scale: 0;
+    }
+    100%{
+        scale: 1.2;
+    }
+}
+@keyframes zoomout {
+    0%{
+        scale: 1.2;
+    }
+    100%{
+        scale: 0;
+    }
+}
+.levelField{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 10%;
+    align-items: flex-start;
+    /* margin: 4rem 0; */
+}
+.levelField *{
+    margin: 0.5rem 0;
+}
+.msgbox p{
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 2rem;
+    color: rgb(73, 60, 68);
+    background-color: rgb(176, 245, 47);
+    letter-spacing: 0.1rem;
+    border-radius: 2rem;
+    width: 90%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: default;
+    
+}
+.levelField label{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: 'Ubuntu';
+    cursor: pointer;
+}
+.levelField button{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2rem;
+    position: absolute;
+    left: 90%;
+    cursor: pointer;
+}
+#Enter{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    font-size: 1.5rem;
+    width: 5rem;
+    border-radius: 2rem;
+    color: white;
+    background-color: rgb(43, 43, 43);
+    font-family: 'Ubuntu';
+    transition: 0.5s;
+}
+#Enter:hover{
+    filter: brightness(1.5);
+    cursor: pointer;
+}
+#Enter:active{
+    background-color: white;
+    color: black;
+}
+
+.levelField input[type="text"]{
+    position: absolute;
+    left: 83%;
+    width: 3rem;
+    height: 1rem;
+    outline: none;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+/* for stats */
+.line p{
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu';
+    color: rgb(255, 255, 255);
+}
+.row p:nth-child(2){
+    color: peachpuff;
+}
+.line{
+    display: flex;
+    flex-direction: column;
+    
+}
+.row{
+    background-color: rgb(53, 53, 53);
+    display: flex;
+    margin: 1rem auto;
+    width: 90%;
+    border-radius: 2rem;
+    box-shadow: 0 0 0.2rem yellow;
+    
+}
+.line button{
+    font-size: 1.5rem;
+    width: 5rem;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    color: white;
+    background-color: rgb(43, 43, 43);
+    outline: none;
+}
+.line button:hover{
+    filter: brightness(1.5);
+    cursor: pointer;
+}

@@ -11,7 +11,10 @@ const low=1,high=21
 let lastScore=0
 let scored=0
 let HighScore=localStorage.getItem("Highscore")
+if(HighScore==="null"){
 
+    HighScore=0
+}
 //audio
 let bgmusic=new Audio("../music/music.mp3")
 let gameOver=new Audio("../music/gameover.mp3")
